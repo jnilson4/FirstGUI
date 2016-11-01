@@ -18,17 +18,17 @@ public class FirstPanel extends JPanel
 		
 	}
 	
-	private void setupPanel();
+	private void setupPanel()
 	{
 		
 	}
 	
-	private void setupLayout();
+	private void setupLayout()
 	{
 		
 	}
 	
-	private void setupListeners();
+	private void setupListeners()
 	{
 		
 	}
