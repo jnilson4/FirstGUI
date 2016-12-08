@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import gui.controller.GUIAppController;
-import gui.view.*;
+import graphics.controller.GraphController;
+import graphics.view.*;
 
 /**
  * @author CodyH
@@ -19,18 +19,18 @@ import gui.view.*;
 public class GUIFrameTest
 {
 
-	private GUIFrame testFrame;
-	private GUIPanel testPanel;
-	private GUIAppController testController;
+	private FirstFrame testFrame;
+	private FirstPanel testPanel;
+	private GraphController testController;
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception
 	{
-		testController = new GUIAppController();
-		testFrame = new GUIFrame(testController);
-		testPanel = new GUIPanel(testController);
+		testController = new GraphController();
+		testFrame = new FirstFrame(testController);
+		testPanel = new FirstPanel(testController);
 	}
 
 	/**
@@ -50,7 +50,7 @@ public class GUIFrameTest
 	@Test
 	public void testGUIFrame()
 	{
-		assertTrue(testFrame.getContentPane() instanceof GUIPanel);
+		assertTrue(testFrame.getContentPane() instanceof FirstPanel);
 		assertTrue(testFrame.isVisible());
 		assertTrue(testFrame.getWidth() > 100);
 		assertTrue(testFrame.getHeight() > 100);
@@ -64,7 +64,7 @@ public class GUIFrameTest
 	public void testGetBaseController()
 	{
 		assertNotNull(testFrame.getBaseController());
-		assertTrue(testFrame.getBaseController() instanceof GUIAppController);
+		assertTrue(testFrame.getBaseController() instanceof GraphController);
 	}
 
 }

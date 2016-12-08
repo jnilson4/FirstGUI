@@ -14,7 +14,7 @@ public class FirstFrame extends JFrame
 		super();
 		this.baseController = baseController;
 		this.appPanel = new FirstPanel(baseController);
-		
+		getBaseController();
 		this.setupFrame();
 	}
 	
@@ -24,5 +24,10 @@ public class FirstFrame extends JFrame
 		this.setTitle("OMG - WINDOWS!!!");
 		this.setSize(new Dimension(600, 400));
 		this.setVisible(true);
+	}
+	
+	public GraphController getBaseController()
+	{
+		return baseController;
 	}
 }

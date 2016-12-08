@@ -8,8 +8,8 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import gui.controller.GUIAppController;
-import gui.view.GUIPanel;
+import graphics.controller.GraphController;
+import graphics.view.FirstPanel;
 
 
 /**
@@ -20,16 +20,16 @@ import gui.view.GUIPanel;
 public class GUIPanelTest
 {
 
-	private GUIPanel testPanel;
-	private GUIAppController testController;
+	private FirstPanel testPanel;
+	private GraphController testController;
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception
 	{
-		testController = new GUIAppController();
-		testPanel = new GUIPanel(testController);
+		testController = new GraphController();
+		testPanel = new FirstPanel(testController);
 	}
 
 	/**
